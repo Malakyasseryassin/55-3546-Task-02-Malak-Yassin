@@ -44,3 +44,7 @@ spring:
 
 USER_NAME: Malak_Yassin # Replace with your name
 ID: 55-3546 # Replace with your ID
+
+
+app:
+  description: "Smart E-Commerce Purchase API"
