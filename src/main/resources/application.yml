@@ -45,8 +45,8 @@ spring:
   elasticsearch:
     uris: http://localhost:9200
 
-USER_NAME: FirstName_LastName # Replace with your name
-ID: Your_ID # Replace with your ID
+USER_NAME: Mala_Yassin
+ID: 55-3546
 
 app:
   version: "1.0.0"
