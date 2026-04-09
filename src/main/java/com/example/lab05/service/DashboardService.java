@@ -4,6 +4,7 @@ import com.example.lab05.dto.DashboardResponse;
 import com.example.lab05.model.cassandra.SensorReading;
 import com.example.lab05.model.mongo.PurchaseReceipt;
 import com.example.lab05.repository.PurchaseReceiptRepository;
+import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.redis.core.RedisTemplate;
