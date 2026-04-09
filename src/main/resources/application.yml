@@ -1,9 +1,10 @@
 spring:
   # ── PostgreSQL + JPA ───────────────────────────────────────
-  datasource:
-    url: jdbc:postgresql://localhost:5432/lab05db
-    username: postgres
-    password: postgres
+  spring:
+    datasource:
+      url: jdbc:postgresql://localhost:5432/lab05db
+      username: postgres
+      password: postgres
 
     jpa:
       hibernate:
