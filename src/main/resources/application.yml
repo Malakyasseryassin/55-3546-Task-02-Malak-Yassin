@@ -15,7 +15,7 @@ spring:
   # ── MongoDB ────────────────────────────────────────────────
   data:
     mongodb:
-      uri: mongodb://root:rootpass@localhost:27017/lab05mongo?authSource=admin
+      uri: mongodb://root:rootpass@localhost:27017/lab05mongo?authSource=admin&authMechanism=SCRAM-SHA-256
 
     # ── Redis ──────────────────────────────────────────────────
     redis:
@@ -25,11 +25,19 @@ spring:
 
   # ── Cassandra ──────────────────────────────────────────────
   cassandra:
-    contact-points: localhost
-    port: 9042
-    local-datacenter: datacenter1
-    keyspace-name: lab05ks
-    schema-action: create-if-not-exists
+      contact-points: localhost
+      port: 9042
+      keyspace-name: lab05ks
+      local-datacenter: datacenter1
+
+      schema-action: none   # IMPORTANT (you already have the table)
+
+      request:
+        timeout: 20s
+
+      connection:
+        connect-timeout: 20s
+        init-query-timeout: 20s
 
   # ── Neo4j ──────────────────────────────────────────────────
   neo4j:
